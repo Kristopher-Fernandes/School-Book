@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/index.css">
+</head>
+<body>
+    <nav>
+        <div class="dropdown">
+            <button class="dropdownButton">|||</button>
+            <div class="content">
+                <div class="contentStyle">
+                    <img src="../images/doggy.gif" alt="This is the profile picture.">
+                    <h1>Welcome Back! Champ</h1>
+                    <a href="#"><button class="btn"> My details</button></a>
+                 <a href="#"><button class="btn">Logout</button></a>
+
+                </div>
+            </div>
+        </div>
+        
+        <ul>
+            <div class="navUL">
+                <a href="./index.html"><li>Home</li></a>
+            <a href="./timetable.html"><li>TimeTable</li></a>
+            <a href="./syllabus.html"><li>Syllabus</li></a>
+            <a href="./homework.html"><li>Homework</li></a>
+            <a href="./results.html"><li>Results</li></a>
+            <a href="./exams.html"><li>Exams</li></a>
+            <a href="./registration.html"><li>Registration</li></a>
+
+            </div>
+            
+        </ul>
+    </nav>
+    <main>
+        <h1>Results</h1>
+        <form>
+            <label for="classSelect">Class:</label>
+            <select id="classSelect" required>
+                <option value="">Select Class</option>
+                <option value="class1">Class I</option>
+                <option value="class2">Class II</option>
+                <option value="class3">Class III</option>
+            </select>
+            <br><br>
+            
+            <label for="subjectSelect">Subject:</label>
+            <select id="subjectSelect" required>
+                <option value="">Select Subject</option>
+                <option value="math">Mathematics</option>
+                <option value="science">Science</option>
+                <option value="english">English</option>
+            </select>
+            <br><br>
+            
+            <label for="studentSelect">Student Name:</label>
+            <select id="studentSelect" required>
+                <option value="">Select Student</option>
+                <option value="student1">Tom</option>
+                <option value="student2">Jerry</option>
+                <option value="student3">Jack</option>
+            </select>
+            <br><br>
+            
+            <label for="marksObtained">Marks Obtained:</label>
+            <input type="number" id="marksObtained" min="0" max="100" required>
+            <br><br>
+            
+            <button type="button" class="btn" onclick="addResult()">Add</button>
+            <input type="submit" class="btn" value="Submit">
+        </form>
+    
+        <!-- Results Table -->
+        <table id="resultsTable" border="1">
+            <thead>
+                <tr>
+                    <th>Class</th>
+                    <th>Subject Selected</th>
+                    <th>Student Name</th>
+                    <th>Marks Obtained</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="resultsTableBody">
+                
+            </tbody>
+        </table>
+    </main>
+    
+    <script src="../JS/result.js"></script>
+
+</body>
+</html>
